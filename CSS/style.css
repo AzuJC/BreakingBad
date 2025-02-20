@@ -1,0 +1,331 @@
+/* -------------- ESTILOS PAGINA INDEX ------------------------------------------------------*/
+
+/* Traer la fuente del cliente */
+
+@font-face{
+    font-family: 'fuenteBrBad';
+    src: url('../fonts/BreakingBad.ttf') format('truetype');
+    font-weight: normal;
+    font-size: normal;
+
+}
+:root{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    --fuenteBr: 'fuenteBrBad';
+}
+#texto-index {
+    font-family: var(--fuenteBr);
+    text-align: center;
+}
+
+/* Defino el tipo de letra para toda la pagina*/
+* {
+    font-family: Helvetica;
+    
+}
+
+/* Fondo de la página */
+body.index {
+    background-image: url("../img/fondo.jpg"); /* Ruta de la imagen */
+    background-position: center center; /* Posicion centrada */
+    background-repeat: no-repeat; /* No repetir la imagen */
+    background-size: cover; /* Cubrir toda la pantalla */
+    background-attachment: fixed; /* Fijar el fondo */
+}
+
+/* Estilos para las secciones */
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Imagen que redirige a otras páginas */
+#poster {
+    width: 700px;
+    height: 300px;
+    border-radius: 20px;
+    border: 10px outset brown;
+}
+
+
+/* ESTILO PAGINA FORMULARIO*/
+/* Titulo*/
+#h1 {
+    text-align: center; /* Centra el texto horizontalmente */
+    display: flex; 
+    justify-content: center; /* Centra el contenido en el eje X */
+    align-items: center; /* Centra el contenido en el eje Y */
+    font-size: 50px; /* Tamaño del texto */
+    color: white; /* Color del texto */
+    text-shadow: 0 0 10px rgba(0, 0, 255, 0.8),  /* Azul fuerte */
+                 0 0 20px rgba(0, 0, 255, 0.6),
+                 0 0 30px rgba(0, 0, 255, 0.4);
+}
+
+/* Estilo general del formulario */
+form {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);    /* Blanco con transparencia */
+    border-radius: 10px;                             /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);      /* Sombra sutil */
+    margin: 0 auto;
+    width: 100%;                                     /* Asegura que el formulario sea flexible */
+    max-width: 600px;                                /* Máximo ancho de 600px */
+    min-height: 300px;                               /* Altura mínima */
+    height: auto;                                    /* Altura automática */
+    overflow: hidden;                                /* Asegura que no se desborde contenido */
+}
+
+
+/* Estilo para el legend dentro del fieldset */
+fieldset legend {
+    text-align: left;       /* Alinea el texto a la izquierda */
+    font-weight: bold;      /* Hace el texto en negrita */
+    font-size: 18px;        /* Tamaño de la fuente */
+    margin-bottom: 10px;    /* Espacio debajo del título */
+}
+
+/* Estilo para los campos de texto y dropdown */
+input[type="text"], 
+select, 
+textarea {
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    width: 80%;                 /* Hacer que los campos ocupen el 80% del ancho */
+    margin-bottom: 16px;
+}
+
+/* Efecto al pasar el ratón por los campos de entrada */
+input[type="text"]:focus, 
+select:focus, 
+textarea:focus {
+    border-color: #66cc66;       /* Cambio de color cuando el campo está en foco */
+    outline: none;                 /* Elimina el contorno predeterminado */
+}
+
+/* Estilo para los botones */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    background-color: #4CAF50;   
+    color: white;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+/* Efecto al pasar el ratón sobre los botones = color mas oscuro */
+button:hover {
+    background-color: #45a049;   
+}
+
+/* Estilo para el botón de reset color rojo */
+button[type="reset"] {
+    background-color: #f44336;   
+}
+
+/* Efecto al pasar el ratón sobre el botón de reset = color mas oscuro*/
+button[type="reset"]:hover {
+    background-color: #e53935;   
+}
+
+
+/* -------------- ESTILO PARA LA PAGINA TABLA PERIODICA ------------------------------------------------------*/
+
+
+/* ----------  Defino las caracteristicas del cuerpo de la pagina de la tabla periodica*/
+
+body.tabla-periodica {
+    display: flex;
+    flex-direction: column; /* Asegura que los elementos se coloquen en columna */
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    text-align: center; /* Centra el texto */
+    background-color: #637124;
+    min-height: 100vh; /* Hace que el cuerpo ocupe toda la altura de la pantalla */
+    margin: 0; /* Elimina márgenes por defecto */
+    padding: 0; /* Elimina el padding */
+}
+
+/*----------  Estilos generales del título */
+/* Contenedor del título principal */
+.title {
+    color: white;
+    font-size: 40px;
+    display: flex;
+    flex-direction: column; /* "Breaking" arriba y "Bad" abajo */
+    align-items: flex-start; /* Alinea los elementos a la izquierda */
+    padding-top: 20px; /* Espacio arriba */
+}
+
+/* Ajustamos "Breaking" para que quede más a la derecha */
+.breaking {
+    position: relative;
+    left: 50px; /* Ajusta este valor según lo necesites */
+    display: inline-block;
+}
+
+/* Contenedor de "Bad" y el subtítulo */
+.bad-container {
+    display: flex;
+    align-items: center; /* Alinea "Bad" y el subtítulo */
+}
+
+/* Ajustamos "Bad" para alinearlo con la "e" de "Breaking" */
+.bad {
+    position: relative;
+    left: 99px; /* Ajusta este valor para que "Bad" esté justo debajo de la "e" */
+}
+
+/* Letras resaltadas (Br y Ba) */
+.highlight {
+    background-color: #b8da20;
+    padding: 2px 4px;
+    border-radius: 0px;
+    color: #2B2C24;
+}
+
+/* Contenedor del subtítulo */
+.subtitle-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center; /* Centra el texto */
+    margin-left: 100px; /* Espacio entre "Bad" y el subtítulo */
+}
+
+/* Estilos del subtítulo */
+.subtitle {
+    color: red;
+    font-size: 20px;
+    line-height: 0.9;
+}
+
+/* ---------- Estilo del cuerpo de la página (tabla periódica) */
+body.tabla-periodica {
+    display: flex;
+    flex-direction: column; /* Coloca los elementos en columna */
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    text-align: center; /* Centra el texto */
+    background-color: #637124;
+    min-height: 100vh; /* Hace que el cuerpo ocupe toda la altura de la pantalla */
+    margin: 0; /* Elimina los márgenes por defecto del body */
+    padding: 0; /* Elimina el padding */
+}
+
+/* ---------- Estilos generales del título */
+.title {
+    color: white;
+    font-size: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinea los elementos a la izquierda */
+    padding-top: 20px; /* Espacio arriba */
+    margin-bottom: 20px;
+}
+
+/* Ajustamos "Breaking" para que quede más a la derecha */
+.breaking {
+    position: relative;
+    left: 50px; /* Ajusta este valor según lo necesites */
+    display: inline-block;
+}
+
+/* Contenedor de "Bad" y el subtítulo */
+.bad-container {
+    display: flex;
+    align-items: center; /* Alinea "Bad" y el subtítulo */
+}
+
+/* Ajustamos "Bad" para alinearlo con la "e" de "Breaking" */
+.bad {
+    position: relative;
+    left: 99px; /* Ajusta este valor para que "Bad" esté justo debajo de la "e" */
+}
+
+/* Letras resaltadas (Br y Ba) */
+.highlight {
+    background-color: #b8da20;
+    padding: 2px 4px;
+    border-radius: 0px;
+    color: #2B2C24;
+}
+
+/* Contenedor del subtítulo */
+.subtitle-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center; /* Centra el texto */
+    margin-left: 100px; /* Espacio entre "Bad" y el subtítulo */
+}
+
+/* Estilos del subtítulo */
+.subtitle {
+    color: red;
+    font-size: 18px;
+    line-height: 0.9;
+}
+
+
+/* ---------- Estilos para la tabla de la tabla periódica */
+
+/* Estilo general de la tabla */
+table {
+    margin-bottom: 20px; /* Agrega espacio debajo de cada tabla */
+    border-spacing: 0; /* Elimina el espacio entre las celdas */
+    background-color: #2B2C24;
+}
+
+/* Características de las celdas */
+td {
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    vertical-align: middle;
+    border: 4px solid #2B2C24; 
+}
+
+/* Hacer invisibles las celdas vacías */
+td:empty {
+    background-color: transparent;
+}
+
+/* Colores para las distintas celdas */
+td.estilo01 { background-color:  #b8da20; }
+td.estilo02 { background-color:  #d4e780; }
+td.estilo03 { background-color:  #ab8ecf; }
+td.estilo04 { background-color:  #eff7c7; }
+td.estilo05 { background-color:  #89a419; }
+td.estilo06 { background-color:  #637126; }
+td.estilo07 { background-color:  #c5e14d; }
+td.estilo08 { background-color:  #bcc49b; }
+td.estilo09 { background-color:  #818d4d; }
+td.estilo10 { background-color:  #c2c727; }
+
+/* Estilos para los textos dentro de las celdas */
+.texto1 {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.texto2 {
+    font-size: 10px;
+}
+
+/* Aplicar a la celda que contiene la imagen */
+#celda-imagen {
+    width: 30px; /* Tamaño de la celda */
+    height: 30px; /* Tamaño de la celda */
+    background-image: url('../img/hankschrader.png'); /* Ruta de la imagen */
+    background-size: cover; /* Hace que la imagen cubra toda la celda */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+}

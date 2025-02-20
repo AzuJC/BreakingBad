@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Secccion con los metadatos de la web
+        
+        -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="img/icon.png">
+        <link rel="styleSheet" href="CSS/style.css">
+        <title>Breaking Bad</title>
+
+    </head>
+    <body class="index">
+        <h1 id="h1">Breaking Bad – Que comience el juego!</h1>
+        <form action="mailto:geoazu.flysch@gmail.com" method="post" enctype="multipart/form-data">
+
+             <fieldset>
+                <legend>Datos personales:</legend>
+                
+                <label for="nombre">Nombre:</label>
+                <!--Anadiendo required se valida el campo, y si no esta relleno NO enviara el formulario-->
+                <input type="text" id="nombre" name="nombre" placeholder="Introduce tu nombre" required><br><br>
+            
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" id="apellidos" name="apellidos"  placeholder="Introduce tus apellidos" required><br><br>
+                
+                <label for="direccion">Dirección Postal:</label>
+                <input type="text" id="direccion" name="direccion" placeholder="Calle, Número, Piso"><br><br>
+                
+                <label for="cp">Código Postal:</label>
+                <input type="text" id="cp" name="cp"><br><br>
+            
+                <label for="ciudad">Ciudad:</label>
+                <input type="text" id="ciudad" name="ciudad"><br><br>
+            
+                <label for="dni">DNI:</label>
+                <input type="text" id="dni" name="dni"><br><br>
+                
+                <label for="email">Correo Electrónico:</label>
+                <input type="text" id="email" name="email" required><br><br>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Información Adicional</legend>
+
+            <label>Sexo:</label>
+            <input type="radio" id="hombre" name="sexo" value="hombre"> <label for="hombre">Hombre</label>
+            <input type="radio" id="mujer" name="sexo" value="mujer"> <label for="mujer">Mujer</label><br><br>
+            
+            <label for="fecha">Fecha de Nacimiento:</label>
+            <input type="date" id="fecha" name="fecha"><br><br>
+            
+            <label for="personaje">Personaje Favorito:</label>
+            <select id="personaje" name="personaje">
+                <option value="jessie">Jessie Pinkman</option>
+                <option value="walter">Walter White</option>
+                <option value="saul">Saul Goodman</option>
+                <option value="gus">Gustavo Fring</option>
+                <option value="pollos">Pollos Hermanos</option>
+                <option value="otros">Otros personajes</option>
+            </select><br><br>
+            
+            <label for="comentarios">Comentarios:</label><br>
+            <textarea id="comentarios" name="comentarios" rows="5" cols="50"></textarea><br><br>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Acciones</legend>
+            <label for="archivo">Adjuntar archivo:</label>
+            <input type="file" id="archivo" name="archivo"><br><br>
+            
+            <button type="submit">Enviar</button>
+            <button type="reset">Borrar</button>
+        </fieldset>
+
+        </form>
+
+    </body>
+
+</html>
